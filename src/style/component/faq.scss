@@ -1,0 +1,94 @@
+@import "../main.scss";
+
+.faq-wrapper {
+  background-color: $light-green;
+  padding: 90px 0px;
+  .container {
+    max-width: 1250px;
+    margin: 0 auto;
+    border: 2px solid #8cc63e;
+    padding: 0px 20px;
+    @include breakpoint($sm) {
+      max-width: 300px;
+    }
+    @include md-breakpoint($sm, $md) {
+      max-width: 700px;
+    }
+  }
+  .accordion {
+    margin: 30px 0px;
+  }
+
+  $base2: #16171a;
+  .toggle {
+    display: none;
+  }
+
+  .option {
+    position: relative;
+    margin-bottom: 1em;
+  }
+
+  .title,
+  .content {
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    transition: all 0.2s;
+  }
+
+  .title {
+    background: $light-green;
+    padding: 1em;
+    display: block;
+    color: $base2;
+    font-weight: bold;
+    border-bottom: 1px solid #a4d77a;
+  }
+  .title:after,
+  .title:before {
+    content: "";
+    position: absolute;
+    right: 26px;
+    top: 43%;
+    width: 1.5px;
+    height: 10px;
+    background-color: #16171a;
+    transition: all 0.2s;
+    transform: rotate(-45deg);
+  }
+  .title:after {
+    transform: rotate(45deg);
+    right: 20px;
+  }
+
+  .content {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #fff;
+    p {
+      margin: 0;
+      padding: 15px;
+      font-size: 0.9em;
+      line-height: 1.5;
+    }
+  }
+
+  .toggle:checked {
+    & + .title,
+    & + .title + .content {
+      box-shadow: 3px 3px 6px #ddd, -3px 3px 6px #ddd;
+    }
+    & + .title + .content {
+      max-height: 500px;
+    }
+    & + .title {
+      background-color: $white;
+    }
+    & + .title:before {
+      transform: rotate(45deg) !important;
+    }
+    & + .title:after {
+      transform: rotate(-45deg) !important;
+    }
+  }
+}

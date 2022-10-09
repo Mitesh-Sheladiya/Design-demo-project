@@ -1,0 +1,22 @@
+@import "../main.scss";
+
+.count-wrapper {
+  background-color: $light-green;
+  .count-inner {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    gap: 100px;
+    grid-auto-flow: column;
+    padding-top: 50px;
+    @include breakpoint($sm) {
+      grid-auto-flow: row;
+      gap: 20px;
+    }
+    .count-item {
+      p {
+        padding-top: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+@import "../main.scss";
+
+.bank-wrapper {
+  background: linear-gradient(
+    289.57deg,
+    #19191a -0.47%,
+    #353537 41.1%,
+    #575757 81.6%,
+    #797979 101.84%
+  );
+  .title-wrapper {
+    @include flex-center;
+    justify-content: space-around;
+    padding: 15px 0px;
+    border-bottom: 1px solid $border;
+    h3 {
+      font-size: 30px;
+    }
+    .bank {
+      color: $white;
+    }
+    .merchants {
+      color: #a1a1a1;
+      @include breakpoint($sm) {
+        display: none;
+      }
+    }
+  }
+  .content-wrapper {
+    display: flex;
+    padding: 100px 65px;
+    @include breakpoint($sm) {
+      width: 100%;
+      padding: 50px 0px;
+      flex-direction: column;
+    }
+    .content {
+      color: $white;
+      width: 50%;
+      @include breakpoint($sm) {
+        width: 100%;
+        padding: 0px 45px;
+      }
+      h3 {
+        margin-top: 50px;
+        margin-bottom: 30px;
+      }
+      .btn {
+        @include button;
+        margin-top: 20px;
+      }
+    }
+    .img-wrapper {
+      width: 50%;
+      text-align: center;
+      .bank-img {
+        height: 150px;
+        width: 150px;
+        @include breakpoint($sm) {
+          display: none;
+        }
+      }
+    }
+  }
+}

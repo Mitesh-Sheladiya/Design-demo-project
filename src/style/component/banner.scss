@@ -1,0 +1,40 @@
+@import "../main.scss";
+
+.banner-wrapper {
+  background-color: $light-green;
+
+  .banner-inner {
+    padding: 100px 45px 20px 90px;
+    // @include grid-center(2);
+    display: flex;
+    justify-content: space-between;
+    @include breakpoint($sm) {
+      flex-direction: column-reverse;
+      padding: 30px 45px 20px 20px;
+    }
+
+    .banner-left {
+      .para-wrapper {
+        padding-top: 40px;
+        max-width: 500px;
+        @include breakpoint($sm) {
+          max-width: 300px;
+        }
+      }
+      .btn {
+        @include button;
+      }
+    }
+    .banner-right {
+      img {
+        @include breakpoint($sm) {
+          width: 300px;
+          margin-left: 25px;
+        }
+        @include md-breakpoint($sm, $md) {
+          width: 400px;
+        }
+      }
+    }
+  }
+}

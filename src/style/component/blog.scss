@@ -1,0 +1,81 @@
+@import "../main.scss";
+
+.blog-wrapper {
+  background-color: $light-green;
+  padding: 90px 0px;
+  text-align: center;
+  @include breakpoint($sm) {
+    padding: 30px 0px;
+  }
+  .carousel {
+    margin-top: 30px;
+    .slick-prev:before {
+      font-size: 40px;
+      color: #897676;
+    }
+    .slick-next:before {
+      font-size: 40px;
+      color: #897676;
+    }
+
+    .slick-slider {
+      margin: 0px 90px;
+      text-align: -webkit-center;
+      @include breakpoint($sm) {
+        margin: 0px 70px;
+      }
+    }
+
+    .achieve-card {
+      height: 370px !important;
+      width: 250px !important;
+      border: 1px solid #c4c4c4;
+      background-color: $white;
+      padding: 10px;
+      position: relative;
+      @include breakpoint($sm) {
+        width: 230px !important;
+      }
+      .content {
+        margin: 15px 15px;
+        text-align: left;
+
+        .min {
+          color: #83b449;
+        }
+        p {
+          font-size: 14px;
+        }
+        h4 {
+          margin: 12px 0px;
+          font-size: 15px;
+        }
+      }
+      .arrow {
+        position: absolute;
+        height: 30px;
+        width: 40px;
+        bottom: 0;
+        right: 0;
+        background: linear-gradient(
+          84deg,
+          #95c11f -3.78%,
+          #77b82a 28.26%,
+          #5bb030 143.37%,
+          #46ac34 146.27%,
+          #3eab35 182.49%,
+          #3aaa35 264.13%
+        );
+        border-radius: 2px;
+        .icon {
+          margin-top: 3px;
+          color: $white;
+        }
+      }
+      img {
+        width: 100%;
+        display: inline-block;
+      }
+    }
+  }
+}

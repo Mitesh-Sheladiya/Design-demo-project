@@ -1,0 +1,49 @@
+@import "../main.scss";
+
+.achievement-wrapper {
+  background: linear-gradient(
+    289.57deg,
+    #19191a -0.47%,
+    #353537 41.1%,
+    #575757 81.6%,
+    #797979 101.84%
+  );
+  padding: 90px 0px;
+  text-align: center;
+  color: $white;
+  .carousel {
+    margin-top: 30px;
+    .slick-prev:before {
+      font-size: 40px;
+      color: #bfb6b6;
+    }
+    .slick-next:before {
+      font-size: 40px;
+      color: #bfb6b6;
+    }
+    .slick-slider {
+      margin: 0px 90px;
+      text-align: -webkit-center;
+      @include breakpoint($sm) {
+        margin: 0px 70px;
+      }
+    }
+    .achieve-card {
+      height: 250px !important;
+      width: 250px !important;
+      border: 1px solid #c4c4c4;
+      padding: 30px;
+      @include breakpoint($sm) {
+        width: 230px !important;
+      }
+      img {
+        width: 150px;
+        display: inline-block;
+      }
+      h3 {
+        margin-top: 30px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
